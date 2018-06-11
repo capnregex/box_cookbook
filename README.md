@@ -1,4 +1,4 @@
-# dev_box
+# box
 
 TODO: Enter the cookbook description here.
 

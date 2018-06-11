@@ -1,12 +1,12 @@
 #
-# Cookbook:: dev_box
+# Cookbook:: box
 # Spec:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'dev_box::default' do
+describe 'box::default' do
   context 'When all attributes are default, on Ubuntu 16.04' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:

@@ -16,7 +16,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[dev_box::default]
+      - recipe[box::default]
     verifier:
       inspec_tests:
         - test/integration/default
