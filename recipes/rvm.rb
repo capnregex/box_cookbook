@@ -51,22 +51,20 @@ git '/home/vagrant/.rvm/src' do
   group 'vagrant'
 end
 
-execute 'install rvm' do
+bash 'install rvm' do
   cwd '/home/vagrant/.rvm/src'
   user 'vagrant'
   group 'vagrant'
   environment(vagrant)
-  command './install' # --ignore-dotfiles'
+  code <<-CODE
+    ./install # --ignore-dotfiles
+  CODE
   creates '/home/vagrant/.rvm/installed.at'
   live_stream true
 end
 
 node[:rvm][:rubies].each do |ruby|
   execute "rvm install #{ruby}" do
-    cwd '/home/vagrant'
-    user 'vagrant'
-    group 'vagrant'
-    environment(vagrant)
     command "sudo -iHu vagrant rvm install #{ruby}"
     creates "/home/vagrant/.rvm/rubies/#{ruby}"
     live_stream true
@@ -75,10 +73,6 @@ end
 
 rvm_ruby = node[:rvm][:use]
 execute "rvm use #{rvm_ruby}" do
-  cwd '/home/vagrant'
-  user 'vagrant'
-  group 'vagrant'
-  environment(vagrant)
   command "sudo -iHu vagrant rvm use #{rvm_ruby} --default"
   creates "/home/vagrant/.rvm/rubies/default"
   live_stream true
