@@ -21,6 +21,7 @@ suites:
       inspec_tests:
         - test/integration/default
         - test/integration/rvm
+        - test/integration/postgresql
         - test/integration/java
         - test/integration/webkit
     attributes:
