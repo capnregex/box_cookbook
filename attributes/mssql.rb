@@ -13,10 +13,7 @@ default[:mssql]={
   },
   packages: %w(mssql-server mssql-server-fts),
   broken_packages: %w(mssql-tools unixodbc-dev),
-  temp_sa_password: 'Vagrant1!',
-  sa_password: 'vagrant',
+  password: 'Vagrant1!',
   pid: 'Developer',
-  users: { 
-    'vagrant': { password: 'vagrant' }
-  }
+  users: %w(vagrant)
 }
