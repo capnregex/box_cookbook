@@ -1,16 +1,12 @@
 # # encoding: utf-8
 
-# Inspec test for recipe box::base
+# Inspec test for recipe box::xubuntu
 
 packages = %w(
-  linux-virtual
-  openssh-server
-  build-essential
-  ruby
-  nodejs
-  npm
-  wget
-  curl
+  xubuntu-core
+  firefox
+  vim-gnome
+  terminator
 )
 
 packages.each do |name|

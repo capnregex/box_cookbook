@@ -29,16 +29,17 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[box::mssql]
+      - recipe[box::default]
+      - recipe[box::coldfusion]
     verifier:
       inspec_tests:
         - test/integration/mssql
-        # - test/integration/default
-        # - test/integration/base
-        # - test/integration/rvm
-        # - test/integration/postgresql
-        # - test/integration/java
-        # - test/integration/webkit
-        # - test/integration/commandbox
+        - test/integration/default
+        - test/integration/base
+        - test/integration/rvm
+        - test/integration/postgresql
+        - test/integration/java
+        - test/integration/webkit
+        - test/integration/commandbox
     attributes:
 
