@@ -4,16 +4,10 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-packages = %w(
-  linux-virtual
-  openssh-server
-  build-essential
-  ruby
-  nodejs
-  npm
-  wget
-  curl
-)
+base = node[:box][:base]
+package base[:packages]
 
-package(packages)
+base[:gems].each do |gem|
+  gem_package gem
+end
 

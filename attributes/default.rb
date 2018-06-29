@@ -1,17 +1,25 @@
 
-default[:box][:base][:packages] = %w(
+box = default[:box]
+base = box[:base]
+
+base[:packages] = %w(
   linux-virtual
-  xubuntu-core
   openssh-server
   build-essential
   ruby
   nodejs
   npm
-  firefox
   wget
   curl
-  vim-gnome
-  terminator
+  git
+  openjdk-8-jdk
+  python3
+  vim
+  nano
+)
+
+base[:gems] = %w(
+  rspec
 )
 
 

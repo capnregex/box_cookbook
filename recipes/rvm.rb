@@ -47,12 +47,26 @@ bash 'install rvm' do
   user 'vagrant'
   group 'vagrant'
   environment(vagrant)
-  code <<-CODE
-    ./install # --ignore-dotfiles
-  CODE
+  code "./install --ignore-dotfiles"
   creates '/home/vagrant/.rvm/installed.at'
   live_stream true
 end
+
+cookbook_file '/home/vagrant/.bash_profile' do
+  source 'dot/bash_profile'
+  mode "0755"
+end
+
+cookbook_file '/home/vagrant/.bashrc' do
+  source 'dot/bashrc'
+  mode "0755"
+end
+
+cookbook_file '/home/vagrant/.profile' do
+  source 'dot/profile'
+  mode "0755"
+end
+
 
 node[:rvm][:rubies].each do |ruby|
   execute "rvm install #{ruby}" do
@@ -68,7 +82,4 @@ execute "rvm use #{rvm_ruby}" do
   creates "/home/vagrant/.rvm/rubies/default"
   live_stream true
 end
-
-
-# source /home/vagrant/.rvm/scripts/rvm
 

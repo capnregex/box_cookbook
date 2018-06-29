@@ -30,7 +30,6 @@ suites:
   - name: default
     run_list:
       - recipe[box::default]
-      - recipe[box::coldfusion]
     verifier:
       inspec_tests:
         - test/integration/mssql
