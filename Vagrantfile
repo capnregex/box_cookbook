@@ -63,7 +63,8 @@ Vagrant.configure("2") do |config|
     Pathname.new(path).mkpath
   end
 
-  config.vm.provision "chef_zero", run: :always do |chef|
+  # , run: :always
+  config.vm.provision "chef_zero" do |chef|
     chef.product = 'chefdk'
 
     # chef.log_level = 'debug'

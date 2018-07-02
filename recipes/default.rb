@@ -25,5 +25,5 @@ include_recipe 'box::freetds'
 include_recipe 'box::coldfusion'
 include_recipe 'box::gui'
 include_recipe 'box::mailcatcher'
-include_recipe 'box::reboot_after'
+# include_recipe 'box::reboot_after'
 
