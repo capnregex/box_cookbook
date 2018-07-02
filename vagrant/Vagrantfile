@@ -1,9 +1,16 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# require 'pry'
+def require_plugin name
+  unless Vagrant.has_plugin?(name)
+    puts "installing plugin %{ name }"
+    %x(vagrant plugin install %{ name })
+    puts "Installed!"
+    puts "retrying: vagrant #{ARGV}"
+    exec 'vagrant', *ARGV
+  end
+end
 
-require_relative 'lib/require_plugin.rb'
 require_plugin('vagrant-proxyconf')
 
 # vagrant plugin install vagrant-proxyconf
