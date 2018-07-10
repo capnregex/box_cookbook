@@ -67,7 +67,6 @@ cookbook_file '/home/vagrant/.profile' do
   mode "0755"
 end
 
-
 node[:rvm][:rubies].each do |ruby|
   execute "rvm install #{ruby}" do
     command "sudo -iHu vagrant rvm install #{ruby}"

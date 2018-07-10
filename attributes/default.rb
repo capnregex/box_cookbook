@@ -1,12 +1,24 @@
 
-box = default[:box]
-base = box[:base]
+# values for ubuntu
+default['ubuntu'] = {
+  archive_url: 'http://us.archive.ubuntu.com/ubuntu',
+  security_url: 'http://us.archive.ubuntu.com/ubuntu',
+  include_source_packages: false,
+  components: 'main restricted universe multiverse',
+  codename: (node['lsb'] || {})['codename'],
+  architectures: ['amd64'],
+  locale: nil
+}
 
-base[:packages] = %w(
+# package list
+box = default[:box]
+box[:packages] ||= []
+box[:packages] = %w(
   linux-virtual
   openssh-server
   build-essential
-  ruby
+  ruby-full
+  ruby-dev
   nodejs
   npm
   wget
@@ -14,12 +26,33 @@ base[:packages] = %w(
   git
   openjdk-8-jdk
   python3
-  vim
   nano
+  xubuntu-core
+  firefox
+  chromium-browser
+  chromium-chromedriver
+  vim-gnome
+  terminator
+  qt5-default
+  libqt5webkit5-dev
+  gstreamer1.0-plugins-base
+  gstreamer1.0-tools
+  gstreamer1.0-x
+  xvfb
+  libpq-dev
+  redis-server
+  redis-sentinel
+  redis-tools
+  ruby-redis
 )
 
-base[:gems] = %w(
+box[:gems] = []
+box[:gems] = %w(
   rspec
+  capybara-webkit
+  headless
+  rack-app
+  puma
+  mailcatcher
 )
-
 
