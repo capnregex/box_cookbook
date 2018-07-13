@@ -7,12 +7,11 @@ default['ubuntu'] = {
   components: 'main restricted universe multiverse',
   codename: (node['lsb'] || {})['codename'],
   architectures: ['amd64'],
-  locale: nil
+  locale: 'en_US.UTF-8'
 }
 
 # package list
 box = default[:box]
-box[:packages] ||= []
 box[:packages] = %w(
   linux-virtual
   openssh-server
@@ -40,19 +39,31 @@ box[:packages] = %w(
   gstreamer1.0-x
   xvfb
   libpq-dev
+  ruby-pg
   redis-server
   redis-sentinel
   redis-tools
   ruby-redis
+  sqlite3
+  libsqlite3-dev
+  node-sqlite3
+  ruby-sqlite3
 )
 
-box[:gems] = []
 box[:gems] = %w(
-  rspec
+  rspec-rails
   capybara-webkit
   headless
   rack-app
   puma
+  pg
   mailcatcher
 )
+
+box[:npm] = %w(
+  yarn
+  n
+  pg
+)
+
 
