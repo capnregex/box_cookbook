@@ -10,8 +10,13 @@ default['ubuntu'] = {
   locale: 'en_US.UTF-8'
 }
 
-# package list
 box = default[:box]
+
+box[:ppas] = {
+  'git-core': 'ppa:git-core/ppa'
+}
+
+# package list
 box[:packages] = %w(
   linux-virtual
   openssh-server
