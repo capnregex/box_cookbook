@@ -15,6 +15,7 @@ depends 'java', '~> 2.1.0'
 depends 'git', '~> 9.0.1'
 depends 'postgresql', '~> 7.0.0'
 depends 'nodejs', '~> 5.0.0'
+# depends 'rvm', '~> 1.1.1'
 
 # depends 'gpg', '~> 0.3.0'
 # depends 'rvm', '~> 0.9.4'
