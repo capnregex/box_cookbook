@@ -29,16 +29,9 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[box::default]
+      - recipe[box::vagrant_user]
     verifier:
       inspec_tests:
-        - test/integration/mssql
-        - test/integration/default
-        - test/integration/base
-        - test/integration/rvm
-        - test/integration/postgresql
-        - test/integration/java
-        - test/integration/webkit
-        - test/integration/commandbox
+        - test/integration/vagrant_user
     attributes:
 
