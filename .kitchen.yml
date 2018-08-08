@@ -29,9 +29,9 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[box::vagrant_user]
+      - recipe[box]
     verifier:
       inspec_tests:
-        - test/integration/vagrant_user
+        - test/integration
     attributes:
 
