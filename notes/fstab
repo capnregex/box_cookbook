@@ -1,0 +1,16 @@
+# etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/dev/mapper/vagrant--vg-root /               ext4    errors=remount-ro 0       1
+# /boot was on /dev/sda1 during installation
+UUID=3adb226f-6eca-4726-afd4-30ed5d2b7ef2 /boot           ext2    defaults        0       2
+/dev/mapper/vagrant--vg-swap_1 none            swap    sw              0       0
+vagrant   /vagrant                vboxsf rw,auto,exec,nodev,uid=1000,gid=1000,_netdev 0 0
+/home/vagrant/Host      /home/vagrant/Host      vboxsf rw,auto,exec,nodev,uid=1000,gid=1000,_netdev 0 0
+/home/vagrant/Pictures  /home/vagrant/Pictures  vboxsf rw,auto,exec,nodev,uid=1000,gid=1000,_netdev 0 0
+/home/vagrant/Documents /home/vagrant/Documents vboxsf rw,auto,exec,nodev,uid=1000,gid=1000,_netdev 0 0
+/home/vagrant/Downloads /home/vagrant/Downloads vboxsf rw,auto,exec,nodev,uid=1000,gid=1000,_netdev 0 0

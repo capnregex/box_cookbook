@@ -24,4 +24,3 @@ describe bash("sudo -iHu vagrant sqlcmd -Q 'select @@version'") do
   its('stderr') { should eq '' }
   its('exit_status') { should eq 0 }
 end
-

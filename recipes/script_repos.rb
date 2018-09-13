@@ -1,4 +1,3 @@
-
 directory "/opt/box" do
   user 'vagrant'
   group 'vagrant'
@@ -15,4 +14,3 @@ git '/opt/box/install' do
   user 'vagrant'
   group 'vagrant'
 end
-

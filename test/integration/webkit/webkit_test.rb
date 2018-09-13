@@ -1,4 +1,3 @@
-
 describe package('libqt5webkit5-dev') do
   it { should be_installed }
 end
@@ -24,4 +23,3 @@ describe command('/opt/test/webkit') do
   it { should exist }
   its('stdout') { should match(/^Hello World!/) }
 end
-

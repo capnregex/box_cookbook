@@ -1,4 +1,3 @@
-
 # values for ubuntu
 default['ubuntu'] = {
   archive_url: 'http://us.archive.ubuntu.com/ubuntu',
@@ -10,6 +9,8 @@ default['ubuntu'] = {
   locale: 'en_US.UTF-8'
 }
 
+default['apt']['key_proxy'] = ENV['http_proxy']
+
 box = default[:box]
 
 box[:ppas] = {
@@ -19,19 +20,21 @@ box[:ppas] = {
 # package list
 box[:packages] = %w(
   linux-virtual
+  linux-headers-virtual
+  linux-image-extra-virtual
   openssh-server
   build-essential
   ruby-full
   ruby-dev
-  nodejs
-  npm
   wget
   curl
   git
+  bash-completion
   openjdk-8-jdk
   python3
   nano
   xubuntu-core
+  xfce4-mount-plugin
   firefox
   chromium-browser
   chromium-chromedriver
@@ -63,12 +66,6 @@ box[:gems] = %w(
   pg
   sqlite3
   mailcatcher
-)
-
-box[:npm] = %w(
-  yarn
-  n
-  pg
 )
 
 

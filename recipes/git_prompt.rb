@@ -1,15 +1,10 @@
+## from https://github.com/git/git
+## git/contrib/completion/git-prompt.sh
+
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
 directory '/opt/git'
 
-remote_file '/opt/git/git-prompt.sh' do
-  source node[:box][:git_prompt][:src]
-  mode "0755"
+cookbook_file '/opt/git/git-prompt.sh' do
+  source 'opt/git/git-prompt.sh'
 end
-
-directory '/etc/profile.d'
-
-cookbook_file '/etc/profile.d/git_prompt_config.sh' do
-  source 'git_prompt_config.sh'
-  mode "0755"
-end
-
