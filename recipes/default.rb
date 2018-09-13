@@ -17,6 +17,7 @@ include_recipe 'nodejs::npm'
 include_recipe 'box::script_repos'
 include_recipe "box::bash_config"
 include_recipe "box::chromedriver"
+include_recipe "box::docker"
 
 # include_recipe 'rvm'
 
