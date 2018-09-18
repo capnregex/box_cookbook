@@ -1,0 +1,25 @@
+---
+driver:
+  name: dokken
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+
+verifier: 
+  name: inspec
+
+platforms:
+  - name: ubuntu-16.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[box]
+    verifier:
+      inspec_tests:
+        - test/integration
+    attributes:
+
