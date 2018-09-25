@@ -7,4 +7,5 @@ directory '/opt/git'
 
 cookbook_file '/opt/git/git-prompt.sh' do
   source 'opt/git/git-prompt.sh'
+  sensitive true
 end

@@ -1,3 +1,4 @@
+
 postgresql_server_install 'install Local development Postgresql Server' do
   version '9.6'
   password 'vagrant'
@@ -15,5 +16,6 @@ end
 postgresql_database 'vagrant' do
   owner 'vagrant'
   template 'template0'
+  locale 'C'
   not_if "psql vagrant -c \"\"", user: 'vagrant'
 end

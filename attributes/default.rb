@@ -55,6 +55,8 @@ box[:packages] = %w(
   sqlite3
   libsqlite3-dev
   ruby-sqlite3
+  zlib1g
+  zlib1g-dev
 )
 
 box[:gems] = %w(

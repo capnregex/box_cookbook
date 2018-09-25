@@ -18,7 +18,9 @@ include_recipe 'box::script_repos'
 include_recipe "box::bash_config"
 include_recipe "box::vim_config"
 include_recipe "box::chromedriver"
-include_recipe "box::docker"
+# include_recipe "box::docker"
+# include_recipe "atom::default"
+# include_recipe "atom::packages"
 
 # include_recipe 'rvm'
 

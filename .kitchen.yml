@@ -1,37 +1,25 @@
 ---
 driver:
-  name: vagrant
-  customize: 
-    memory: 3072
-
-transport:
-  name: ssh
-  connection_retries: 12
-  connection_retry_sleep: 15
+  name: docker
+  use_sudo: false
+  provision_command: 
+    - mkdir -p /run/sshd
 
 provisioner:
   name: chef_zero
-  root_path: /home/vagrant/kitchen
-  always_update_cookbooks: true
-  retry_on_exit_code:
-    - 35 # exit code signaling that the node is rebooting
-  client_rb:
-    client_fork: false # forked instances don't return the real exit code
 
 verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  # - name: centos-7
-  # - name: ubuntu-18.04
+- name: ubuntu-16.04
+- name: ubuntu-18.04
 
 suites:
   - name: default
     run_list:
-      - recipe[box]
+      - recipe[box::default]
     verifier:
       inspec_tests:
-        - test/integration
+        - test/integration/default
     attributes:
-
