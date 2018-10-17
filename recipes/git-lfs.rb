@@ -3,6 +3,6 @@ cookbook_file "/opt/git/git-lfs-script.deb.sh" do
   source "git-lfs-script.deb.sh"
 end
 
-script
-sudo apt-get install git-lfs
-git lfs install
+# script
+# sudo apt-get install git-lfs
+# git lfs install

@@ -17,9 +17,4 @@ depends 'postgresql', '~> 7.0.0'
 depends 'nodejs', '~> 5.0.0'
 depends 'docker', '~> 4.6.5'
 depends 'rvm', '~> 0.1.2'
-# depends 'atom', '~> 0.2.0'
-
-# depends 'gpg', '~> 0.3.0'
-# depends 'rvm', '~> 0.9.4'
-# depends 'chef_rvm', '~> 2.0.0'
 
