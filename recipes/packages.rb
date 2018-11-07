@@ -8,6 +8,7 @@ box[:ppas].each_pair do |name, ppa|
 end
 
 package box[:packages] do
-  timeout 60 * 60 # 60 minutes
-  # live_stream true
+  timeout 3 * 60 * 60 # 3 hours
+  live_stream true
 end
+
