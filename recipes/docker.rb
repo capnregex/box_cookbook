@@ -2,6 +2,7 @@
 # be able to controll docker as vagrant
 include_recipe 'chef-apt-docker'
 package 'docker-ce'
+package 'docker-compose'
 
 group 'docker' do
   members 'vagrant'
