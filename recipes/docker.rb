@@ -1,12 +1,13 @@
 
 # be able to controll docker as vagrant
+include_recipe 'chef-apt-docker'
+package 'docker-ce'
+
 group 'docker' do
   members 'vagrant'
   append true
   system true
 end
-
-package 'docker-ce'
 
 docker_service_manager 'default' do
   action :start
