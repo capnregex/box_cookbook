@@ -15,6 +15,7 @@ include_recipe 'box::idnotify_watchers'
 include_recipe 'box::git'
 include_recipe 'box::gems'
 include_recipe 'nodejs::npm'
+include_recipe 'yarn'
 include_recipe 'box::script_repos'
 include_recipe "box::bash_config"
 include_recipe "box::vim_config"
