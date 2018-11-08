@@ -9,6 +9,5 @@ end
 
 package box[:packages] do
   timeout 3 * 60 * 60 # 3 hours
-  live_stream true
 end
 
