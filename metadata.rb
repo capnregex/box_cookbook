@@ -17,5 +17,6 @@ depends 'postgresql', '~> 7.0.0'
 depends 'nodejs', '~> 5.0.0'
 depends 'chef-apt-docker', '~> 2.0.6'
 depends 'docker', '~> 4.6.7'
-depends 'rvm', '~> 0.1.3'
+depends 'rvm', '~> 0.1.4'
+depends 'redis', '~> 0.1.0'
 

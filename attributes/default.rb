@@ -48,10 +48,6 @@ box[:packages] = %w(
   xvfb
   libpq-dev
   ruby-pg
-  redis-server
-  redis-sentinel
-  redis-tools
-  ruby-redis
   sqlite3
   libsqlite3-dev
   ruby-sqlite3

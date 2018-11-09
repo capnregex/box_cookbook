@@ -21,6 +21,7 @@ include_recipe "box::bash_config"
 include_recipe "box::vim_config"
 include_recipe "box::chromedriver"
 include_recipe "box::docker"
+include_recipe "redis::default"
 # include_recipe "atom::default"
 # include_recipe "atom::packages"
 
