@@ -57,20 +57,6 @@ directory "/home/vagrant/.config" do
   mode '0700'
 end
 
-directory "/home/vagrant/.config/terminator" do
-  recursive true
-  owner 'vagrant'
-  group 'vagrant'
-  mode '0700'
-end
-
-cookbook_file "/home/vagrant/.config/terminator/config" do
-  source 'terminator_config'
-  owner 'vagrant'
-  group 'vagrant'
-  mode '0700'
-end
-
 directory "/home/vagrant/.config/xfce4" do
   recursive true
   owner 'vagrant'
