@@ -91,3 +91,5 @@ cookbook_file "/home/vagrant/.config/xfce4/panel/whiskermenu-1.rc" do
   group 'vagrant'
   mode '0700'
 end
+
+

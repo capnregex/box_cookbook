@@ -33,13 +33,10 @@ box[:packages] = %w(
   openjdk-8-jdk
   python3
   nano
-  xubuntu-core
   xfce4-mount-plugin
   firefox
   chromium-browser
   chromium-chromedriver
-  vim-gnome
-  terminator
   qt5-default
   libqt5webkit5-dev
   gstreamer1.0-plugins-base
@@ -53,6 +50,16 @@ box[:packages] = %w(
   ruby-sqlite3
   zlib1g
   zlib1g-dev
+)
+
+box[:gui][:packages] = %w(
+  xubuntu-core
+  vim-gnome
+  terminator
+)
+
+box[:cli][:packages] = %w(
+  vim-nox
 )
 
 box[:gems] = %w(

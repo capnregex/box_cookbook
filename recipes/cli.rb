@@ -1,9 +1,9 @@
 # Cookbook:: box
-# Recipe:: gui
+# Recipe:: cli
 
 include_recipe 'box::base'
 
-package node[:box][:gui][:packages] do
+package node[:box][:cli][:packages] do
   timeout 3 * 60 * 60 # 3 hours
 end
 
