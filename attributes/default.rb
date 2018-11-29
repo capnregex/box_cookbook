@@ -19,9 +19,6 @@ box[:ppas] = {
 
 # package list
 box[:packages] = %w(
-  linux-virtual
-  linux-headers-virtual
-  linux-image-extra-virtual
   openssh-server
   build-essential
   ruby-full
@@ -50,6 +47,15 @@ box[:packages] = %w(
   ruby-sqlite3
   zlib1g
   zlib1g-dev
+)
+
+box[:virtual][:packages] = %w(
+  linux-virtual
+  linux-image-virtual
+  linux-image-extra-virtual
+  linux-headers-virtual
+  linux-tools-virtual
+  linux-cloud-tools-virtual
 )
 
 box[:gui][:packages] = %w(

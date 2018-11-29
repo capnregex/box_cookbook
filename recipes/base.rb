@@ -8,6 +8,7 @@ include_recipe 'box::root_user'
 include_recipe 'box::vagrant_user'
 
 include_recipe 'ubuntu::default' # includes 'apt::default'
+include_recipe 'box::virtual'
 include_recipe 'box::packages'
 include_recipe 'box::upgrade'
 include_recipe 'box::postgresql'
