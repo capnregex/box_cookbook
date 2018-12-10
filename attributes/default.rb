@@ -27,6 +27,7 @@ box[:packages] = %w(
   firefox
   git
   graphviz
+  graphviz-dev
   gstreamer1.0-plugins-base
   gstreamer1.0-tools
   gstreamer1.0-x
