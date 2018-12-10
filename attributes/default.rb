@@ -19,32 +19,33 @@ box[:ppas] = {
 
 # package list
 box[:packages] = %w(
-  openssh-server
-  build-essential
-  ruby-full
-  ruby-dev
-  wget
-  curl
-  git
   bash-completion
-  openjdk-8-jdk
-  python3
-  nano
-  xfce4-mount-plugin
-  firefox
+  build-essential
   chromium-browser
   chromium-chromedriver
-  qt5-default
-  libqt5webkit5-dev
+  curl
+  firefox
+  git
+  graphviz
   gstreamer1.0-plugins-base
   gstreamer1.0-tools
   gstreamer1.0-x
-  xvfb
   libpq-dev
-  ruby-pg
-  sqlite3
+  libqt5webkit5-dev
   libsqlite3-dev
+  nano
+  openjdk-8-jdk
+  openssh-server
+  python3
+  qt5-default
+  ruby-dev
+  ruby-full
+  ruby-pg
   ruby-sqlite3
+  sqlite3
+  wget
+  xfce4-mount-plugin
+  xvfb
   zlib1g
   zlib1g-dev
 )
