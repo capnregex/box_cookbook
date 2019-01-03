@@ -15,7 +15,7 @@ include_recipe 'box::postgresql'
 include_recipe 'box::idnotify_watchers'
 include_recipe 'box::git'
 include_recipe 'box::gems'
-include_recipe 'box::node_n'
+include_recipe 'box::node'
 include_recipe 'box::yarn'
 include_recipe 'box::script_repos'
 include_recipe "box::bash_config"
