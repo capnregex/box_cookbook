@@ -5,7 +5,7 @@ maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures box'
 long_description 'Installs/Configures box'
-version '0.1.9'
+version '0.1.10'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 issues_url 'https://github.com/capnregex/box_cookbook/issues'
 source_url 'https://github.com/capnregex/box_cookbook'

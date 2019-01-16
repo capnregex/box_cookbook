@@ -1,4 +1,10 @@
 
+postgresql_repository 'Add downloads.postgresql.org repository' do
+  version '9.6'
+end
+
+apt_update
+
 postgresql_server_install 'install Local development Postgresql Server' do
   version '9.6'
   password 'vagrant'

@@ -35,6 +35,7 @@ box[:packages] = %w(
   libqt5webkit5-dev
   libsqlite3-dev
   nano
+  ntp
   openjdk-8-jdk
   openssh-server
   python3
