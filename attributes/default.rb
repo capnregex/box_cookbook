@@ -31,7 +31,6 @@ box[:packages] = %w(
   gstreamer1.0-plugins-base
   gstreamer1.0-tools
   gstreamer1.0-x
-  libpq-dev
   libqt5webkit5-dev
   libsqlite3-dev
   nano
@@ -42,7 +41,6 @@ box[:packages] = %w(
   qt5-default
   ruby-dev
   ruby-full
-  ruby-pg
   ruby-sqlite3
   sqlite3
   wget

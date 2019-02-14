@@ -1,14 +1,24 @@
 
+pg_version = '9.6'
 postgresql_repository 'Add downloads.postgresql.org repository' do
-  version '9.6'
+  version pg_version
 end
 
 apt_update
 
 postgresql_server_install 'install Local development Postgresql Server' do
-  version '9.6'
+  version pg_version
   password 'vagrant'
   action [:install, :create]
+end
+
+# $ sudo apt-get install libpq-dev=9.6.* libpq5=9.6.*
+package 'libpq5' do
+  version pg_version + '*'
+end
+
+package 'libpq-dev' do
+  version pg_version + '*'
 end
 
 # create a postgresql user 'vagrant'
