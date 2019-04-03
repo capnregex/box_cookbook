@@ -10,6 +10,7 @@ end
 cookbook_file '/etc/init.d/mailcatcher' do
   source 'etc/init.d/mailcatcher'
   mode '0755'
+  sensitive true
 end
 
 service 'mailcatcher' do

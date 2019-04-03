@@ -8,7 +8,9 @@ package %w(
   xvfb
 )
 
-gem_package "capybara-webkit"
+gem_package "capybara-webkit" do
+  ignore_failure true
+end
 gem_package "headless"
 gem_package "rack-app"
 gem_package "puma"

@@ -71,7 +71,6 @@ box[:cli][:packages] = %w(
 
 box[:gems] = %w(
   rspec-rails
-  capybara-webkit
   headless
   rack-app
   puma
